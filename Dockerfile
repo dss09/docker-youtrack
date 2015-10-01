@@ -2,7 +2,7 @@ FROM smalllark/java
 MAINTAINER Dmitri Sh <smalllark@gmail.com>
 
 # Install Youtrack.
-ENV YOUTRACK_VERSION 6.0.12634
+ENV YOUTRACK_VERSION 6.5.16807
 RUN mkdir -p /usr/local/youtrack && \
     mkdir -p /var/lib/youtrack && \
     wget -nv http://download.jetbrains.com/charisma/youtrack-$YOUTRACK_VERSION.jar -O /usr/local/youtrack/youtrack-$YOUTRACK_VERSION.jar && \
