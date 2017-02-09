@@ -2,10 +2,10 @@ FROM smalllark/java
 MAINTAINER Dmitri Sh <smalllark@gmail.com>
 
 # Install Youtrack.
-ENV YOUTRACK_VERSION 7.0.29566
+ENV YOUTRACK_VERSION 2017.1.30867
 RUN mkdir -p /usr/local/youtrack && \
     mkdir -p /var/lib/youtrack && \
-    wget -nv http://download.jetbrains.com/charisma/youtrack-$YOUTRACK_VERSION.jar -O /usr/local/youtrack/youtrack-$YOUTRACK_VERSION.jar && \
+    wget -nv https://download.jetbrains.com/charisma/youtrack-$YOUTRACK_VERSION.jar -O /usr/local/youtrack/youtrack-$YOUTRACK_VERSION.jar && \
     ln -s /usr/local/youtrack/youtrack-$YOUTRACK_VERSION.jar /usr/local/youtrack/youtrack.jar
 ADD ./etc /etc
 EXPOSE 8080
