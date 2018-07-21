@@ -3,10 +3,9 @@
 # Redirect stderr so everything ends up in the log file
 exec 2>&1
 
-exec java \
-	-Xmx1g \
+exec java \	
 	-Duser.home=/var/lib/youtrack \
 	-Djavax.net.ssl.trustStore=$JAVA_HOME/jre/lib/security/cacerts -Djavax.net.ssl.trustStorePassword=changeit \
 	-Djetbrains.youtrack.disableBrowser=true -Djetbrains.youtrack.enableGuest=false \
 	-Djetbrains.mps.webr.log4jPath=/etc/youtrack/log4j.xml -Djava.awt.headless=true \
-	-jar /usr/local/youtrack/youtrack.jar --J-XX:MaxMetaspaceSize=250m 8080  2>&1
+	-jar /usr/local/youtrack/youtrack.jar --J-XX:MaxMetaspaceSize=250m --J-Xmx1g 8080  2>&1
